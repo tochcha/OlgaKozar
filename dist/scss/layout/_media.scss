@@ -659,6 +659,21 @@
 			width: 49%;
 		}
 	}
+	
+	.main.main-900 {
+		.content {
+			margin-right: 0;
+		}
+	}
+
+	.learners ul {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		li {
+			width: 33.333%;
+		}
+	}
 }
 
 /* <=991 end */
@@ -1328,6 +1343,7 @@
 		.buttonbox {
 			text-align: center;
 		}
+
 		button,
 		.button,
 		a.button,
@@ -1339,7 +1355,16 @@
 			line-height: 18px;
 			padding: 15px 27px;
 			border-radius: 40px;
+			min-width: 270px;
 		}
+	}
+	
+	.main.main-900 .content {
+		margin-bottom: 20px;
+	}
+	
+	.main-900 h3 {
+		line-height: 1.2;
 	}
 }
 
@@ -1639,7 +1664,7 @@
 
 	.visual {
 		background: none !important;
-		padding: 16px 0;
+		padding: 26px 0 8px;
 		height: auto;
 
 		&:before {
@@ -1688,6 +1713,7 @@
 
 	.main {
 		padding-top: 17px;
+
 		.content {
 			margin-bottom: 50px;
 		}
@@ -1702,6 +1728,36 @@
 			width: 100%;
 			justify-content: flex-start;
 		}
+
+		&.three-col {
+			imgbox {
+				padding-bottom: 6px;
+			}
+
+			li {
+				width: 100%;
+				padding-right: 0;
+				text-align: center;
+			}
+
+			.imgbox {
+				width: 100%;
+			}
+
+			p {
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+	
+	.learners ul li {
+		width: 50%;
+	}
+	
+	.review__social .title {
+		display: none;
 	}
 }
 
@@ -2339,6 +2395,12 @@
 
 		.section_title {
 			font: 600 18px/21px Oswald, PTSans, sans-serif;
+			padding-bottom: 18px;
+			margin-bottom: 12px;
+
+			span {
+				font: 300 18px/21px Oswald, PTSans, sans-serif;
+			}
 		}
 
 		&__mobile {
@@ -2365,6 +2427,43 @@
 				text-align: left;
 			}
 		}
+
+		&.three-col {
+			imgbox {
+				padding-bottom: 6px;
+			}
+
+			li {}
+
+			.imgbox {}
+
+			p {
+				text-align: center;
+			}
+		}
+	}
+
+	.article h4 {
+		font-size: 18px;
+		text-align: center;
+	}
+	
+	.main-900 h3 {
+		font-size: 20px;
+		text-align: center;
+	}
+	
+	.learners ul li {
+		width: 100%;
+	}
+	
+	.review__header {
+		display: block;
+		padding-right: 22px;
+	}
+	
+	.review__social {
+		text-align: right;
 	}
 }
 
@@ -2554,6 +2653,15 @@
 		p {
 			font: 18px/21px PTSans, Arial, sans-serif;
 		}
+	}
+	
+	.review__header .imgbox img {
+		width: 44px;
+		height: 44px;
+	}
+	
+	.review__text {
+		font: 18px/20px PTSans, Arial, sans-serif;
 	}
 }
 
