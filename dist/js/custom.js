@@ -279,6 +279,8 @@ $('.video-popup').photobox('a',{
 	zoomable:true //Включить, отключить увеличение колесиком мыши
 });
 
+/*$('.article p:empty').addClass('empty');*/
+
 /* анимация */
 new WOW().init();
 /* анимацияend */
