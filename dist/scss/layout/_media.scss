@@ -206,6 +206,10 @@
 	.helpbox ul {
 		padding-bottom: 0;
 	}
+	
+	.helpbox li {
+		padding-bottom: 22px;
+	}
 }
 
 /* <= 1199 end */
@@ -369,6 +373,10 @@
 		&__wrapper {
 			padding: 50px 6px 32px;
 		}
+	}
+	
+	.blog_item__text {
+		padding: 25px 20px 30px 25px;
 	}
 }
 
@@ -690,7 +698,7 @@
 	}
 
 	.main .content {
-		margin: 0 0 92px;
+		margin: 0 0 52px;
 	}
 
 	.main .aside {
@@ -715,6 +723,7 @@
 		}
 	}
 
+	.cats ul,
 	.learners ul {
 		display: flex;
 		justify-content: flex-start;
@@ -774,6 +783,18 @@
 				width: 36%;
 				margin: 0 -2%;
 			}
+		}
+	}
+	
+	.hits_list,
+	.hits_list ul {
+		padding-bottom: 0;
+	}
+	
+	.blog {
+		li {
+			list-style: none;
+			width: 48%;
 		}
 	}
 }
@@ -1471,7 +1492,11 @@
 
 	.teacherslist {
 		&.active {
-			padding-bottom: 60px;
+			padding-bottom: 110px;
+		}
+		
+		ul {
+			padding-bottom: 20px;
 		}
 
 		li {
@@ -1487,6 +1512,10 @@
 				margin: 0 -2%;
 			}
 		}
+	}
+	
+	.blog_item__text {
+		padding: 25px 20px 30px 25px;
 	}
 }
 
@@ -1679,6 +1708,7 @@
 
 	.footer {
 		padding: 30px 0 22px;
+		border: none;
 
 		.wrapper {
 			display: flex;
@@ -1874,6 +1904,7 @@
 		}
 	}
 
+	.cats ul li,
 	.learners ul li {
 		width: 50%;
 	}
@@ -1897,6 +1928,10 @@
 		&.active {
 			padding-bottom: 180px;
 		}
+		
+		ul {
+			padding-bottom: 0;
+		}
 
 		li {
 			width: 49%;
@@ -1911,6 +1946,16 @@
 				margin: 0 -1.5%;
 			}
 		}
+	}
+	
+	.blog {
+		li {
+			width: 100%;
+		}
+	}
+	
+	.blog_item__text {
+		padding: 35px 35px 49px 40px;
 	}
 }
 
@@ -2606,6 +2651,7 @@
 		text-align: center;
 	}
 
+	.cats ul li,
 	.learners ul li {
 		width: 100%;
 	}
@@ -2685,13 +2731,31 @@
 		&.active {
 			padding-bottom: 20px;
 		}
+
 		ul {
-			padding-bottom: 22px;
+			padding-bottom: 2px;
 		}
 
 		li {
 			width: 100%;
 			height: auto;
+			max-height: 0;
+			overflow: hidden;
+			opacity: 0;
+			visibility: hidden;
+			margin-bottom: 0;
+
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4),
+			&:nth-child(5) {
+				max-height: 500px;
+				overflow: visible;
+				opacity: 1;
+				visibility: visible;
+				margin-bottom: 30px;
+			}
 
 			.teacherslist__wrapper {
 				padding-left: 21px;
@@ -2702,14 +2766,46 @@
 				width: 100%;
 				margin: 0 0 20px;
 				transform: translateY(0);
+
 				.teacherslist__wrapper {
 					padding-top: 50px;
 				}
 			}
 		}
+
 		.teacherslist__desc p {
 			font: 16px/19px PTSans, Arial, sans-serif;
 			@include line-clamp(4);
+		}
+	}
+
+	.show_all_button {
+		display: block;
+
+		&.dn {
+			display: none;
+		}
+	}
+
+	.teacherslist.show_all {
+		li {
+			max-height: 500px;
+			overflow: visible;
+			opacity: 1;
+			visibility: visible;
+			margin-bottom: 30px;
+		}
+	}
+	
+	.blog {
+		li {
+			text-align: center;
+		}
+		h2 {
+			&:after {
+				left: 50%;
+				transform: translateX(-50%);
+			}
 		}
 	}
 }
@@ -2918,10 +3014,22 @@
 	.teacherslist {
 		li {
 			text-align: left;
-			margin-bottom: 10px;
+			margin-bottom: 0;
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4),
+			&:nth-child(5) {
+				max-height: 500px;
+				overflow: visible;
+				opacity: 1;
+				visibility: visible;
+				margin-bottom: 10px;
+			}
+
 			&.active {
 				width: 100%;
-				margin: 10px 0;
+
 				.teacherslist__wrapper {
 					padding-top: 20px;
 				}
@@ -2950,12 +3058,13 @@
 			height: 40px;
 		}
 	}
-	
+
 	.teacherslist__name {
 		font: bold 20px PTSans, Arial, sans-serif;
 		margin-left: 52px;
 		padding-bottom: 3px;
 		padding-top: 4px;
+
 		&:after {
 			left: 0;
 			transform: translateX(0);
@@ -2963,9 +3072,41 @@
 			width: 30px;
 		}
 	}
-	
+
 	.teacherslist__desc {
 		clear: both;
+	}
+
+	.show_all_button {
+		font-size: 15px;
+	}
+
+	.teacherslist.show_all {
+		li {
+			max-height: 500px;
+			overflow: visible;
+			opacity: 1;
+			visibility: visible;
+			margin-bottom: 10px;
+		}
+	}
+	
+	.blog {
+		padding: 0;
+		li {
+			margin-bottom: 10px;
+		}
+		h2 {
+			font: bold 18px/21px PTSans, Arial, sans-serif;
+			padding-bottom: 12px;
+			margin-bottom: 7px;
+		}
+		p {
+			font: 16px/19px PTSans, Arial, sans-serif;
+		}
+	}
+	.blog_item__text {
+		padding: 10px 25px 17px;
 	}
 }
 

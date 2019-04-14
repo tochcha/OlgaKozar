@@ -2556,6 +2556,10 @@ button.mfp-close {
 		font: 18px/28px PTSans, Arial, sans-serif;
 		color: $title-color;
 		padding-bottom: 0;
+		span {
+			display: block;
+			color: $text-color;
+		}
 	}
 
 	&__mobile {
@@ -2589,7 +2593,7 @@ button.mfp-close {
 
 	.content {
 		/*width: 830px;*/
-		margin-right: 108px;
+		margin-right: 106px;
 	}
 
 	.aside {
@@ -2642,7 +2646,7 @@ button.mfp-close {
 
 .article {
 	h4 {
-		font: bold 24px/32px PTSans, Arial, sans-serif;
+		font: bold 24px/37px PTSans, Arial, sans-serif;
 		padding: 0 0 8px;
 	}
 
@@ -2681,7 +2685,7 @@ button.mfp-close {
 	li {
 		list-style: none;
 		width: 47%;
-		padding: 0 8% 52px 0;
+		padding: 0 8% 43px 0;
 		display: flex;
 		justify-content: flex-start;
 	}
@@ -2821,6 +2825,7 @@ button.mfp-close {
 	}
 }
 
+.cats,
 .learners {
 	padding: 35px 30px 25px;
 	border: 1px solid #e9e9e9;
@@ -3145,6 +3150,100 @@ button.mfp-close {
 			}
 		}
 	}
+}
+
+.show_all_button {
+	cursor: pointer;
+	font: bold 18px/46px PTSans, Arial, sans-serif;
+	text-align: center;
+	border: 1px solid #e9e9e9;
+	border-radius: 5px;
+	color: $title-color;
+	margin: 0 0 20px;
+	transition: .2s;
+	display: none;
+
+	&:hover {
+		box-shadow: 4px 8px 60px rgba(0, 0, 0, 0.12);
+	}
+}
+
+.blog {
+	padding: 66px 0 22px;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		&:after {
+			display: block;
+			content: '';
+			width: 31.5%;
+		}
+	}
+
+	li {
+		list-style: none;
+		width: 31.5%;
+		margin-bottom: 30px;
+
+		> a {
+			display: block;
+			text-decoration: none;
+			border: 1px solid #e9e9e9;
+			border-radius: 5px;
+			overflow: hidden;
+			transition: .2s;
+			position: relative;
+			height: 100%;
+			&:hover {
+				box-shadow: 4px 8px 60px rgba(0, 0, 0, 0.12);
+			}
+		}
+	}
+
+	h2 {
+		font: bold 24px PTSans, Arial, sans-serif;
+		padding: 0 0 27px;
+		position: relative;
+		margin-bottom: 21px;
+		text-transform: none;
+
+		&:after {
+			width: 40px;
+			height: 4px;
+			background-color: #f00;
+			border-radius: 4px;
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	p {
+		font: 18px/28px PTSans, Arial, sans-serif;
+		padding-bottom: 0;
+		color: $text-color;
+	}
+}
+
+.blog_item__text {
+	padding: 35px 35px 49px 40px;
+}
+
+.blog_item__tag {
+	position: absolute;
+	top: 9px;
+	left: 10px;
+}
+
+.blog_item__tag-top-0 {
+	top: 0;
 }
 
 /**/

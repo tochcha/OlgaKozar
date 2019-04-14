@@ -305,6 +305,11 @@ jQuery(function($){
 	});
 });
 
+$(".show_all_button").click(function () {
+	$('.teacherslist').addClass('show_all');
+	$(this).addClass('dn');
+});
+
 
 /* анимация */
 new WOW().init();
