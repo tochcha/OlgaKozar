@@ -269,8 +269,8 @@ $('.tabs li a').click(function () {
 /* tabs*/
 
 // Если нужно при адаптации вырезать блок и вставит в другое место 
-if ($(window).width() < 768) {
-	$('.crop-block').detach().insertAfter($('.after-block'));
+if ($(window).width() < 600) {
+	$('.first-aside .aside').detach().insertAfter($('.after-block'));
 }
 
 $('.video-popup').photobox('a',{
@@ -308,6 +308,10 @@ jQuery(function($){
 $(".show_all_button").click(function () {
 	$('.teacherslist').addClass('show_all');
 	$(this).addClass('dn');
+});
+
+$(".cats .view_all span, .cats .title_mobile").click(function () {
+	$('.cats').toggleClass('active');
 });
 
 
