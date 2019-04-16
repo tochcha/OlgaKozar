@@ -128,6 +128,9 @@
 
 /* 1200 - 1440 */
 @media only screen and (min-width : 1200px) and (max-width : 1440px) {
+	.teacherslist.active {
+		padding-bottom: 320px;
+	}
 	.about__text {
 		padding-right: 80px;
 	}
@@ -363,7 +366,7 @@
 
 	.teacherslist {
 		&.active {
-			padding-bottom: 350px;
+			padding-bottom: 380px;
 		}
 
 		li {
@@ -1538,7 +1541,7 @@
 
 	.teacherslist {
 		&.active {
-			padding-bottom: 110px;
+			padding-bottom: 370px;
 		}
 
 		ul {
@@ -2041,7 +2044,7 @@
 
 	.teacherslist {
 		&.active {
-			padding-bottom: 180px;
+			padding-bottom: 530px;
 		}
 
 		ul {
@@ -2931,7 +2934,7 @@
 
 	.teacherslist {
 		&.active {
-			padding-bottom: 20px;
+			padding-bottom: 150px;
 		}
 
 		ul {

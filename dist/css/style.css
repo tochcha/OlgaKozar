@@ -4883,7 +4883,8 @@ button.mfp-close { -webkit-animation: pulse-none 1.5s infinite; animation: pulse
 @media only screen and (min-width: 992px) and (max-width: 1440px) { .teacherslist li.active { margin: 0 -1%; width: 25%; } }
 
 /* 1200 - 1440 */
-@media only screen and (min-width: 1200px) and (max-width: 1440px) { .about__text { padding-right: 80px; } }
+@media only screen and (min-width: 1200px) and (max-width: 1440px) { .teacherslist.active { padding-bottom: 320px; }
+  .about__text { padding-right: 80px; } }
 
 /* 1200 - 1440 end */
 @media only screen and (max-width: 1279px) { .prefooter .wrapper { -webkit-flex-flow: wrap; -ms-flex-flow: wrap; flex-flow: wrap; text-align: center; }
@@ -4935,7 +4936,7 @@ button.mfp-close { -webkit-animation: pulse-none 1.5s infinite; animation: pulse
   .hits_list h2 { padding: 18px 25px 28px; }
   .searches li { width: 19%; }
   .searches p { font-size: 18px; }
-  .teacherslist.active { padding-bottom: 350px; }
+  .teacherslist.active { padding-bottom: 380px; }
   .teacherslist li { width: 24%; }
   .teacherslist__wrapper { padding: 50px 6px 32px; }
   .blog_item__text { padding: 25px 20px 30px 25px; }
@@ -5161,7 +5162,7 @@ button.mfp-close { -webkit-animation: pulse-none 1.5s infinite; animation: pulse
   .article button, .article .button, .article a.button, .article input[type=button], .article input[type=submit] { width: auto; height: auto; font-size: 15px; line-height: 18px; padding: 15px 27px; border-radius: 40px; min-width: 270px; }
   .main.main-900 .content { margin-bottom: 20px; }
   .main-900 h3 { line-height: 1.2; }
-  .teacherslist.active { padding-bottom: 110px; }
+  .teacherslist.active { padding-bottom: 370px; }
   .teacherslist ul { padding-bottom: 20px; }
   .teacherslist li { width: 48%; }
   .teacherslist li .teacherslist__wrapper { padding-left: 21px; padding-right: 21px; }
@@ -5261,7 +5262,7 @@ button.mfp-close { -webkit-animation: pulse-none 1.5s infinite; animation: pulse
   .review__social .title { display: none; }
   .filter__buttons { -webkit-justify-content: space-around; -ms-flex-pack: distribute; justify-content: space-around; }
   .filter__buttons a { line-height: 26px; font-size: 16px; }
-  .teacherslist.active { padding-bottom: 180px; }
+  .teacherslist.active { padding-bottom: 530px; }
   .teacherslist ul { padding-bottom: 0; }
   .teacherslist li { width: 49%; }
   .teacherslist li .teacherslist__wrapper { padding-left: 11px; padding-right: 11px; }
@@ -5437,7 +5438,7 @@ button.mfp-close { -webkit-animation: pulse-none 1.5s infinite; animation: pulse
   .filter input[type=submit] { width: 34px; height: 30px; background-size: 15px 15px; }
   .filter__buttons a { padding: 0 5px; border-width: 1px; -webkit-box-flex: 1; -webkit-flex-grow: 1; -ms-flex-positive: 1; flex-grow: 1; text-align: center; }
   .filter__buttons a.active { border-width: 1px; }
-  .teacherslist.active { padding-bottom: 20px; }
+  .teacherslist.active { padding-bottom: 150px; }
   .teacherslist ul { padding-bottom: 2px; }
   .teacherslist li { width: 100%; height: auto; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; margin-bottom: 0; }
   .teacherslist li:nth-child(1), .teacherslist li:nth-child(2), .teacherslist li:nth-child(3), .teacherslist li:nth-child(4), .teacherslist li:nth-child(5) { max-height: 500px; overflow: visible; opacity: 1; visibility: visible; margin-bottom: 30px; }
