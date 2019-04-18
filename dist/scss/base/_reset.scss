@@ -20,6 +20,7 @@ $link-hover-color: #f00;
 //text, titles
 $text-color: #828282;
 $title-color: #333;
+$green-color: #6fcf97;
 
 $font-size-h1: 36px;
 $line-height-h1: 1.1875;
@@ -415,6 +416,12 @@ input[type=submit] {
 	&:active {
 		text-decoration: none;
 		box-shadow: inset 0px 0px 15px rgba(255, 0, 0, 0.2);
+	}
+	
+	&:disabled {
+		opacity: .5;
+		animation: none;
+		cursor: default;
 	}
 }
 
