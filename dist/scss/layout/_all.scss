@@ -3398,7 +3398,7 @@ button.mfp-close {
 	&__item {
 		display: flex;
 		justify-content: space-between;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		margin-bottom: 20px;
 		position: relative;
 
@@ -3406,12 +3406,12 @@ button.mfp-close {
 			z-index: 23;
 
 			.reg__status {
-				margin-top: 70px;
+				margin-top: 72px;
 			}
 
 			.reg__content {
 				&:after {
-					top: 82px;
+					top: 86px;
 				}
 			}
 
@@ -3430,19 +3430,19 @@ button.mfp-close {
 			}
 		}
 
-		#step-2 {
+		&#step-2 {
 			z-index: 22;
 		}
 
-		#step-3 {
+		&#step-3 {
 			z-index: 21;
 		}
 
-		#step-4 {
+		&#step-4 {
 			z-index: 20;
 		}
 
-		#step-5 {
+		&#step-5 {
 			z-index: 19;
 		}
 	}
@@ -3484,11 +3484,11 @@ button.mfp-close {
 
 	&__content {
 		background-color: #f6f6f6;
-		min-height: 400px;
 		position: relative;
-		padding: 45px 40px 50px;
+		padding: 43px 40px 30px;
 		border-radius: 5px;
 		flex-grow: 1;
+		max-width: 1178px;
 
 		&:after {
 			content: '';
@@ -3546,19 +3546,31 @@ button.mfp-close {
 				width: 100%;
 			}
 		}
+
+		.reg__title {
+			color: $green-color;
+		}
 	}
 }
 
 .reg {
 	&__title {
 		padding-bottom: 20px;
-		color: $green-color;
+		color: #f00;
 		text-transform: uppercase;
 		font: bold 27px PTSans, Arial, sans-serif;
+		transition: .2s;
+		span {
+			white-space: nowrap;
+		}
+		i {
+			display: none;
+		}
 	}
 
 	p {
 		padding-bottom: 10px;
+		color: $title-color;
 	}
 
 	textarea,
@@ -3578,7 +3590,7 @@ button.mfp-close {
 		margin: 0;
 		font: 20px/48px PTSans, Arial, sans-serif;
 		color: #adadad;
-		padding: 0 26px;
+		padding: 0 16px;
 		vertical-align: middle;
 		display: inline-block;
 		border-radius: 6px;
@@ -3590,6 +3602,9 @@ button.mfp-close {
 
 	textarea {
 		height: 150px;
+		transition: .2s;
+		padding: 10px 16px;
+		line-height: 28px;
 	}
 
 	&__fields {
@@ -3598,14 +3613,16 @@ button.mfp-close {
 		flex-wrap: wrap;
 
 		&__column {
+			width: 49%;
 			max-width: 526px;
-			flex-grow: 1;
+			flex: none;
 			padding-bottom: 3px;
 		}
 	}
 
 	&__fields__item {
 		padding-bottom: 20px;
+		transition: .8s;
 
 		label {
 			display: block;
@@ -3621,9 +3638,27 @@ button.mfp-close {
 	flex-wrap: wrap;
 
 	&__column {
+		width: 49%;
 		max-width: 526px;
-		flex-grow: 1;
+		flex: none;
 		padding-bottom: 3px;
+
+		&.checklist__column-40 {
+			max-width: 42%;
+		}
+
+		&.checklist__column-60 {
+			max-width: 56.5%;
+
+			p {
+				padding-bottom: 13px;
+				color: $text-color;
+			}
+
+			textarea {
+				height: 120px;
+			}
+		}
 	}
 
 	&__item {
@@ -3636,6 +3671,12 @@ button.mfp-close {
 			cursor: pointer;
 			padding-left: 40px;
 			transition: .2s;
+
+			span {
+				display: block;
+				font: 16px PTSans, Arial, sans-serif;
+				padding-top: 10px;
+			}
 
 			&:before {
 				content: '';
@@ -3665,6 +3706,279 @@ button.mfp-close {
 			}
 		}
 	}
+}
+
+.interform {
+	transition: .2s;
+	opacity: 0;
+	visibility: hidden;
+	max-height: 0;
+	overflow: hidden;
+
+	.checklist__column {
+		display: flex;
+		flex-wrap: wrap;
+
+		.checklist__item {
+			padding-right: 40px;
+		}
+	}
+
+	p {
+		width: 100%;
+		flex: none;
+	}
+
+	textarea {
+		height: 155px;
+	}
+
+	&.toefl {
+		textarea {
+			height: 258px;
+		}
+	}
+}
+
+.vacancy-field {
+	visibility: hidden;
+	opacity: 0;
+	max-height: 0;
+	padding-bottom: 0;
+	overflow: hidden;
+}
+
+.for-work {
+	.for-target-1 {
+		display: none;
+	}
+
+	.for-target-2 {
+		display: block;
+	}
+}
+
+.for-vacancy {
+	.vacancy-field {
+		visibility: visible;
+		opacity: 1;
+		max-height: 500px;
+	}
+
+	textarea {
+		height: 188px;
+	}
+
+	.for-target-1 {
+		display: none;
+	}
+
+	.for-target-3 {
+		display: block;
+	}
+}
+
+.for-study {
+	.for-target-1 {
+		display: none;
+	}
+
+	.for-target-5 {
+		display: block;
+	}
+}
+
+.for-other {
+	.for-target-1 {
+		display: none;
+	}
+
+	.for-target-6 {
+		display: block;
+	}
+}
+
+.for-target-6,
+.for-target-5,
+.for-target-4,
+.for-target-2,
+.for-target-3 {
+	display: none;
+}
+
+.interform__checks p {
+	padding-bottom: 20px;
+}
+
+.for-inter {
+	.interform__checks {
+		opacity: 1;
+		visibility: visible;
+		max-height: 1500px;
+		border-top: 1px solid #e0e0e0;
+		padding-top: 29px;
+		padding-bottom: 29px;
+	}
+
+	.reg__fields__column {
+		display: none;
+	}
+	
+	.for-target-1 {
+		display: none;
+	}
+
+	.for-target-4 {
+		display: block;
+	}
+}
+
+.for-inter-ielts {
+	.interform {
+		opacity: 1;
+		visibility: visible;
+		max-height: 1600px;
+
+		.reg__fields__column {
+			display: block;
+		}
+	}
+}
+
+.reg__fields.interform {
+	border: none;
+}
+
+.reg__fields.exam-other,
+.reg__fields.toefl {
+	opacity: 0;
+	visibility: hidden;
+	max-height: 0;
+	padding-top: 0;
+	overflow: hidden;
+}
+
+.for-inter-toefl .checklist__column-ielts-vars,
+.for-inter-other .checklist__column-ielts-vars {
+	opacity: 0;
+	max-height: 0;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+.checklist__column-ielts-vars {
+	transition: .2s;
+	opacity: 1;
+	visibility: visible;
+	max-height: 1500px;
+}
+
+.for-inter-toefl {
+	.reg__fields.toefl {
+		opacity: 1;
+		visibility: visible;
+		max-height: 1500px;
+	}
+
+	.reg__fields.toefl .reg__fields__column {
+		display: block;
+	}
+}
+
+.for-inter-other {
+	.reg__fields.exam-other {
+		opacity: 1;
+		visibility: visible;
+		max-height: 1500px;
+	}
+
+	.reg__fields.exam-other .reg__fields__column {
+		display: block;
+	}
+}
+
+.reg {
+	h4 {
+		font-size: 20px;
+	}
+}
+
+.checklist {
+	&.three-cols {
+		padding-bottom: 12px;
+
+		.checklist__column {
+			width: 33%;
+		}
+	}
+}
+
+.check_circle_list {
+	&__item {
+		display: inline-block;
+
+		input {
+			display: none;
+		}
+
+		label {
+			display: block;
+			border: 2px solid #e0e0e0;
+			min-width: 42px;
+			height: 42px;
+			border-radius: 21px;
+			background-color: #fff;
+			text-align: center;
+			font: 20px/38px PTSans, Arial, sans-serif;
+			margin: 0 12px 12px 0;
+			cursor: pointer;
+			transition: .2s;
+
+			&:hover {
+				color: $title-color;
+			}
+		}
+
+		input:checked + label {
+			color: $title-color;
+			border-color: #f00;
+		}
+	}
+}
+
+.check_circle_list__wrapper {
+	padding-bottom: 41px;
+
+	&__duration {
+		padding-bottom: 20px;
+
+		label {
+			padding-left: 27px;
+			padding-right: 27px;
+		}
+	}
+}
+
+#step-4 {
+	.checklist {
+		&.three-cols {
+			padding-bottom: 0;
+
+			.checklist__column {
+				width: 31%;
+				flex: none;
+			}
+		}
+	}
+}
+
+#step-5 .reg__statusbar:before {
+	display: none;
+}
+
+.reg_button {
+	text-align: center;
+	padding: 30px 0 20px;
 }
 
 /**/

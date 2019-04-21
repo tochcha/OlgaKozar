@@ -131,6 +131,7 @@
 	.teacherslist.active {
 		padding-bottom: 320px;
 	}
+
 	.about__text {
 		padding-right: 80px;
 	}
@@ -1612,26 +1613,28 @@
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	
+
 	.gift-form-section {
 		.wrapper {
 			display: flex;
 			flex-direction: column;
 		}
+
 		.check-section__right {
 			order: 2;
 		}
+
 		.check-section__left {
 			order: 1;
 		}
 	}
-	
+
 	.check-section .iconbox {
 		width: 49px;
 		padding: 16px 13px 0 0;
 		margin-top: 0;
 	}
-	
+
 	.hidden-767 {
 		display: none;
 	}
@@ -2153,12 +2156,12 @@
 	.sert_intro {
 		font: 18px PTSans, Arial, sans-serif;
 	}
-	
+
 	.serts_img {
 		top: auto;
 		bottom: -120px;
 	}
-	
+
 	.gift-form-section .check-section__left {
 		padding-left: 0;
 	}
@@ -3067,31 +3070,33 @@
 		text-align: center;
 		font: 24px/25px PTSans, Arial, sans-serif;
 	}
-	
+
 	.serts_img {
 		position: relative;
 		bottom: 0;
 		left: 0;
 	}
-	
+
 	.gift-form-section {
 		padding-top: 0;
+
 		h3 {
 			text-align: center;
 		}
 	}
-	
+
 	.gift-form-section .check-section__text {
 		padding-top: 12px;
+
 		p {
 			text-align: left;
 		}
 	}
-	
+
 	.gift-form-section .check-section__left {
 		text-align: center;
 	}
-	
+
 	.visual_cert {
 		margin-bottom: 70px;
 	}
@@ -3407,12 +3412,12 @@
 			padding-top: 30px;
 		}
 	}
-	
+
 	.serts_img {
 		width: calc(100% + 30px);
 		margin-left: -15px;
 	}
-	
+
 	.gift-form-section h3 {
 		font-size: 20px;
 	}
@@ -3454,7 +3459,7 @@
 			padding-right: 15px;
 		}
 	}
-	
+
 	.gift-form-section .check-section__left {
 		p {
 			a {
@@ -3462,7 +3467,7 @@
 			}
 		}
 	}
-	
+
 	.visual_cert {
 		margin-bottom: 50px;
 	}
@@ -3517,34 +3522,245 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	}
 }
 
-/*==========  Mobile First Method  ==========*/
+@media only screen and (max-width : 991px) {
+	.reg__content {
+		padding: 43px 30px 30px;
+	}
 
-/* <=479 */
-@media only screen and (max-width : 479px) {}
+	.checklist__column,
+	.checklist.three-cols .checklist__column {
+		width: 100%;
+		max-width: 100%;
+	}
 
-/* <=479 end */
+	.for-inter .interform__checks {
+		padding-bottom: 10px;
+	}
+}
 
-// Экстрамалые девайсы («телефоны», < 576px)
-@media (min-width: 480px) {}
+@media only screen and (max-width : 767px) {
+	.reg__item {
+		flex-wrap: wrap;
+	}
 
-// Экстрамалые девайсы («телефоны», < 576px) end
+	.reg__content {
+		width: 100%;
 
-// Малые девайсы («ландшафтные телефоны», >= 576px)
-@media (min-width: 576px) {}
+		&:after {
+			display: none;
+		}
+	}
 
-// Малые девайсы («ландшафтные телефоны», >= 576px) end
+	.reg__statusbar {
+		&:before {
+			display: none;
+		}
+	}
 
-// Средние девайсы («таблетки», >= 768px)
-@media (min-width: 768px) {}
+	.reg__status {
+		margin-top: 0 !important;
+	}
 
-// Средние девайсы («таблетки», >= 768px) end
+	.reg__content {
+		margin-top: -20px;
+	}
 
-// Большие девайсы (десктопы, >= 992px)
-@media (min-width: 992px) {}
+	.checklist__column,
+	.checklist.three-cols .checklist__column,
+	.reg__fields__column {
+		width: 100% !important;
+		max-width: 100% !important;
+	}
 
-// Большие девайсы (десктопы, >= 992px) end
+	.reg__fields {
+		display: block;
+	}
+}
 
-// Экстрабольшие девайсы (большие десктопы, >= 1200px)
-@media (min-width: 1200px) {}
+@media only screen and (max-width : 599px) {
+	.reg__title {
+		font-size: 25px;
+	}
 
-// Экстрабольшие девайсы (большие десктопы, >= 1200px) end
+	.reg__fields__item label,
+	.checklist__item label,
+	.reg p {
+		font: 18px/22px PTSans, Arial, sans-serif;
+	}
+
+	.checklist__item {
+		padding-bottom: 20px;
+	}
+
+	.check_circle_list__item label {
+		margin: 0 10px 10px 0;
+	}
+
+	.check_circle_list__wrapper__duration label {
+		padding: 0 24px;
+	}
+
+	.reg_button {
+		padding: 10px 0 0;
+	}
+}
+
+@media only screen and (max-width : 479px) {
+	.reg .wrapper {
+		padding: 0;
+	}
+
+	.reg__content {
+		border-radius: 0;
+		padding: 25px 16px 10px;
+	}
+
+	.reg__item:nth-child(even) .reg__content {
+		background-color: #fff;
+	}
+
+	.reg__statusbar {
+		display: none;
+	}
+
+	.reg__title {
+		font: bold 20px/30px PTSans, Arial, sans-serif;
+		padding-bottom: 19px;
+
+		i {
+			display: inline-block;
+			vertical-align: top;
+			width: 30px;
+			height: 30px;
+			border: 2px solid #e0e0e0;
+			text-align: center;
+			font: 500 16px/27px Oswald, PTSans, sans-serif;
+			color: $title-color;
+			border-radius: 50%;
+			margin-right: 10px;
+			position: relative;
+		}
+	}
+
+	.reg__item {
+		&.focus {
+			.reg__title {
+				i {
+					background-color: #f00;
+					color: #fff;
+					border-color: #f00;
+				}
+			}
+		}
+
+		&.active {
+			.reg__title {
+				i {
+					background-color: $green-color;
+					color: #fff;
+					border-color: $green-color;
+					font-size: 0;
+
+					&:after {
+						content: '\f00c';
+						font-family: FontAwesome;
+						color: #fff;
+						font-size: 19px;
+						line-height: 28px;
+						display: block;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	.reg p {
+		font: 18px/21px PTSans, Arial, sans-serif;
+		padding-bottom: 17px;
+	}
+
+	.reg__content > p:first-child {
+		padding-left: 40px;
+	}
+
+	.checklist__item label::before {
+		left: 3px;
+	}
+
+	.reg__fields__item label,
+	.checklist__item label,
+	.reg p {
+		line-height: 21px;
+	}
+
+	.checklist__item {
+		padding-bottom: 17px;
+	}
+
+	.reg textarea {
+		height: 120px !important;
+		line-height: 22px !important;
+	}
+
+	.reg__fields__item {
+		padding-bottom: 10px;
+	}
+
+	.vacancy-field {
+		padding-bottom: 0;
+	}
+
+	.for-vacancy .vacancy-field {
+		padding-bottom: 10px;
+	}
+
+	.reg__fields__column {
+		padding-bottom: 0;
+	}
+
+	#step-2 h4 {
+		padding-left: 40px;
+	}
+
+	.column-100 {
+		padding-bottom: 10px;
+	}
+
+	.interform .checklist__column .checklist__item {
+		padding-right: 13px;
+	}
+
+	.check_circle_list__wrapper__duration .check_circle_list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.check_circle_list__wrapper__duration label {
+		padding: 0 10px;
+		margin-right: 0;
+	}
+	
+	.reg + .footer .buttonbox {
+		display: none;
+	}
+}
+
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/

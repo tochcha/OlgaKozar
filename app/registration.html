@@ -72,14 +72,14 @@
 		<div class="reg">
 			<div class="wrapper">
 				<form method="post" action="" id="forma" name="">
-					<div id="step-1" class="reg__item nonactive">
+					<div id="step-1" class="reg__item">
 						<div class="reg__statusbar">
 							<div class="reg__status"><span>1</span></div>
 						</div>
 						<div class="reg__content">
 							<p>Ответы на эти вопросы помогут нам подобрать наиболее подходящего для Вас преподавателя</p>
-							<div class="reg__title">Ваши цели</div>
-							<div class="checklist">
+							<div class="reg__title"><i>1</i>Ваши цели</div>
+							<div class="checklist checklist-base">
 								<div class="checklist__column">
 									<div class="checklist__item">
 										<input type="radio" name="radiostep-1" id="radiostep-1" checked>
@@ -111,19 +111,154 @@
 							</div>
 							<div class="reg__fields">
 								<div class="reg__fields__column">
-									<div class="reg__fields__item"><textarea id="textarea1" onkeyup="checkParams()" placeholder="Раскажите подробней о Ваших интересах и пожеланиях..."></textarea></div>
+									<div class="reg__fields__item for-target-1">
+										<textarea id="textarea1" onkeyup="checkParams_1_1()" placeholder="Раскажите подробней о Ваших интересах и пожеланиях..."></textarea>
+									</div>
+									<div class="reg__fields__item for-target-2">
+										<textarea id="textarea2" onkeyup="checkParams_1_2()" placeholder="Раскажите нам, кем Вы работаете. В каких ситуациях Вам нужен язык (общении с клиентами, презентации, переговоры.. итд)."></textarea>
+									</div>
+									<div class="reg__fields__item for-target-3">
+										<textarea id="textarea3" onkeyup="checkParams_1_3()" placeholder="Вы готовитесь на будущее или у Вас уже есть дата собеседования?"></textarea>
+									</div>
+									<div class="reg__fields__item for-target-5">
+										<textarea id="textarea5" onkeyup="checkParams_1_5()" placeholder="Расскажите подробнее. Где Вы планируете учиться? Когда?..."></textarea>
+									</div>
+									<div class="reg__fields__item for-target-6">
+										<textarea id="textarea6" onkeyup="checkParams_1_6()" placeholder="Расскажите поподробней о Ваших целях и пожеланиях.  Чем больше информации у нас будет, тем больше мы сможем Вам помочь."></textarea>
+									</div>
 								</div>
 								<div class="reg__fields__column">
-									<div class="reg__fields__item">
+									<div class="reg__fields__item for-target-1">
 										<label>Ваш возраст</label>
-										<input id="inptext1" onkeyup="checkParams()" type="text" value="">
+										<input id="inptext1" onkeyup="checkParams_1_1()" type="text" value="">
+									</div>
+									<div class="reg__fields__item for-target-2">
+										<label>Ваш возраст</label>
+										<input id="inptext2" onkeyup="checkParams_1_2()" type="text" value="">
+									</div>
+									<div class="reg__fields__item for-target-3">
+										<label>Ваш возраст</label>
+										<input id="inptext3" onkeyup="checkParams_1_3()" type="text" value="">
+									</div>
+									<div class="reg__fields__item for-target-5">
+										<label>Ваш возраст</label>
+										<input id="inptext5" onkeyup="checkParams_1_5()" type="text" value="">
+									</div>
+									<div class="reg__fields__item for-target-6">
+										<label>Ваш возраст</label>
+										<input id="inptext6" onkeyup="checkParams_1_6()" type="text" value="">
+									</div>
+									<div class="reg__fields__item vacancy-field">
+										<label>На какую должность Вы будете собеседоваться?</label>
+										<input id="inptext4" onkeyup="checkParams_1_3()" type="text" value="">
 									</div>
 								</div>
 							</div>
-							<input id="name" onkeyup="checkParams()" type="text" placeholder="Введите имя" autocomplete="off" /><br>
-							<input id="email" onkeyup="checkParams()" type="email" placeholder="Введите e-mail" autocomplete="off" /><br />
-							<input id="phone" onkeyup="checkParams()" type="tel" placeholder="Введите телефон" autocomplete="off" /><br />
-							<input id="submit" type="button" value="Отправить" disabled>
+							
+							<!-- международный экзамен -->
+							<div class="checklist interform interform__checks">
+								<div class="checklist__column">
+									<p>Какой экзамен Вы планируете сдавать?</p>
+									<div class="checklist__item">
+										<input type="radio" name="radiostep-1-inter" id="radiostep-7" checked>
+										<label for="radiostep-7">IELTS</label>
+									</div>
+									<div class="checklist__item">
+										<input type="radio" name="radiostep-1-inter" id="radiostep-8">
+										<label for="radiostep-8">TOEFL</label>
+									</div>
+									<div class="checklist__item">
+										<input type="radio" name="radiostep-1-inter" id="radiostep-9">
+										<label for="radiostep-9">Other</label>
+									</div>
+								</div>
+								<div class="checklist__column checklist__column-ielts-vars">
+									<p>Вы будете сдавать...</p>
+									<div class="checklist__item">
+										<input type="radio" name="radiostep-inter-2" id="radiostep-10" checked>
+										<label for="radiostep-10">General IELTS</label>
+									</div>
+									<div class="checklist__item">
+										<input type="radio" name="radiostep-inter-2" id="radiostep-11">
+										<label for="radiostep-11">Academic IELTS</label>
+									</div>
+								</div>
+							</div>
+							<div class="reg__fields interform ielts">
+								<div class="reg__fields__column">
+									<div class="reg__fields__item">
+										<label>Когда Вы планируете сдавать экзамен?</label>
+										<input id="inptext7" onkeyup="checkParams_1_7()" type="text" value="">
+									</div>
+									<div class="reg__fields__item">
+										<label>Вы уже сдавали этот экзамен? Если да, то когда и с каким результатом?</label>
+										<input id="inptext8" onkeyup="checkParams_1_7()" type="text" value="">
+									</div>
+									<div class="reg__fields__item">
+										<label>Какой балл Вам необходим?</label>
+										<input id="inptext9" onkeyup="checkParams_1_7()" type="text" value="">
+									</div>
+								</div>
+								<div class="reg__fields__column">
+									<div class="reg__fields__item">
+										<label>Комментарии или пожелания.</label>
+										<textarea id="textarea7" onkeyup="checkParams_1_7()" placeholder="Раскажите подробней о Ваших интересах и пожеланиях..."></textarea>
+									</div>
+									<div class="reg__fields__item">
+										<label>Ваш возраст</label>
+										<input id="inptext10" onkeyup="checkParams_1_7()" type="text" value="">
+									</div>
+								</div>
+							</div>
+							<div class="reg__fields interform toefl">
+								<div class="reg__fields__column">
+									<div class="reg__fields__item">
+										<label>Когда Вы планируете сдавать экзамен?</label>
+										<input id="inptext11" onkeyup="checkParams_1_8()" type="text" value="">
+									</div>
+									<div class="reg__fields__item">
+										<label>Вы уже сдавали этот экзамен? Если да, то когда и с каким результатом?</label>
+										<input id="inptext12" onkeyup="checkParams_1_8()" type="text" value="">
+									</div>
+									<div class="reg__fields__item">
+										<label>Ваш возраст</label>
+										<input id="inptext13" onkeyup="checkParams_1_8()" type="text" value="">
+									</div>
+								</div>
+								<div class="reg__fields__column">
+									<div class="reg__fields__item">
+										<label>Комментарии или пожелания.</label>
+										<textarea id="textarea8" onkeyup="checkParams_1_8()" placeholder="Раскажите подробней о Ваших интересах и пожеланиях..."></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="reg__fields interform exam-other">
+								<div class="reg__fields__column">
+									<div class="reg__fields__item">
+										<label>Какой именно экзамен Вы планируете сдавать?</label>
+										<input id="inptext14" onkeyup="checkParams_1_9()" type="text" value="">
+									</div>
+									<div class="reg__fields__item">
+										<label>Когда Вы планируете сдавать экзамен?</label>
+										<input id="inptext15" onkeyup="checkParams_1_9()" type="text" value="">
+									</div>
+									<div class="reg__fields__item">
+										<label>Вы уже сдавали этот экзамен? Если да, то когда и с каким результатом?</label>
+										<input id="inptext16" onkeyup="checkParams_1_9()" type="text" value="">
+									</div>
+								</div>
+								<div class="reg__fields__column">
+									<div class="reg__fields__item">
+										<label>Комментарии или пожелания.</label>
+										<textarea id="textarea9" onkeyup="checkParams_1_9()" placeholder="Раскажите подробней о Ваших интересах и пожеланиях..."></textarea>
+									</div>
+									<div class="reg__fields__item">
+										<label>Ваш возраст</label>
+										<input id="inptext17" onkeyup="checkParams_1_9()" type="text" value="">
+									</div>
+								</div>
+							</div>
+							<!-- международный экзамен end -->
 						</div>
 					</div>
 					<div id="step-2" class="reg__item">
@@ -131,94 +266,141 @@
 							<div class="reg__status"><span>2</span></div>
 						</div>
 						<div class="reg__content">
-							<input id="name2" onkeyup="checkParams2()" type="text" placeholder="Введите имя" autocomplete="off" /><br>
-							<input id="email2" onkeyup="checkParams2()" type="email" placeholder="Введите e-mail" autocomplete="off" /><br />
-							<input id="phone2" onkeyup="checkParams2()" type="tel" placeholder="Введите телефон" autocomplete="off" /><br />
-							<input id="submit2" type="button" value="Отправить" disabled>
+						<div class="reg__title"><i>2</i>Ваши пожелания</div>
+							<h4>С кем бы Вы хотели заниматься:</h4>
+							<div class="checklist three-cols">
+								<div class="checklist__column">
+									<div class="checklist__item">
+										<input type="radio" name="radiostep-2" id="radiostep-12" checked>
+										<label for="radiostep-12">Только с носителем языка <span>(у меня неплохой английский и моя цель — это максимальная практика).</span></label>
+									</div>
+								</div>
+								<div class="checklist__column">
+									<div class="checklist__item">
+										<input type="radio" name="radiostep-2" id="radiostep-13">
+										<label for="radiostep-13">Частично с носителем языка, частично <br>с русскоязычным преподавателем <span>(я пока не готов заниматься только с носителем. <br>Мне нужны также обьяснения правилна русском языке).</span></label>
+									</div>
+								</div>
+								<div class="checklist__column">
+									<div class="checklist__item">
+										<input type="radio" name="radiostep-2" id="radiostep-14">
+										<label for="radiostep-14">С русскоязычным преподавателем <span>(я только начинаю изучать английский и мне будет комфортней с русскоязычным репетитором).</span></label>
+									</div>
+								</div>
+							</div>
+							<p>Какие личные и профессиональные качества Вы бы хотели видеть в Вашем преподавателе: </p>
+							<div class="column-100"><textarea id="textarea10" onkeyup="checkParams_2_1()"></textarea></div>
 						</div>
 					</div>
+					<div id="step-3" class="reg__item">
+						<div class="reg__statusbar">
+							<div class="reg__status"><span>3</span></div>
+						</div>
+						<div class="reg__content">
+							<div class="reg__title"><i>3</i>Расписание занятий </div>
+							<div class="checklist">
+								<div class="checklist__column checklist__column-40">
+									<div class="check_circle_list__wrapper">
+										<h4>Сколько раз в неделю Вы бы хотели заниматься: </h4>
+										<div class="check_circle_list">
+											<div class="check_circle_list__item">
+												<input type="radio" name="check_circle-1" id="check_circle-1" checked>
+												<label for="check_circle-1">1</label>
+											</div>
+											<div class="check_circle_list__item">
+												<input type="radio" name="check_circle-1" id="check_circle-2">
+												<label for="check_circle-2">2</label>
+											</div>
+											<div class="check_circle_list__item">
+												<input type="radio" name="check_circle-1" id="check_circle-3">
+												<label for="check_circle-3">3</label>
+											</div>
+											<div class="check_circle_list__item">
+												<input type="radio" name="check_circle-1" id="check_circle-4">
+												<label for="check_circle-4">4</label>
+											</div>
+											<div class="check_circle_list__item">
+												<input type="radio" name="check_circle-1" id="check_circle-5">
+												<label for="check_circle-5">5</label>
+											</div>
+											<div class="check_circle_list__item">
+												<input type="radio" name="check_circle-1" id="check_circle-6">
+												<label for="check_circle-6">6</label>
+											</div>
+											<div class="check_circle_list__item">
+												<input type="radio" name="check_circle-1" id="check_circle-7">
+												<label for="check_circle-7">7</label>
+											</div>
+										</div>
+									</div>
+									<div class="check_circle_list__wrapper check_circle_list__wrapper__duration">
+										<h4>Длительность занятий: </h4>
+										<div class="check_circle_list">
+											<div class="check_circle_list__item">
+												<input type="radio" name="check_circle-2" id="check_circle-8">
+												<label for="check_circle-8">30 минут</label>
+											</div>
+											<div class="check_circle_list__item">
+												<input type="radio" name="check_circle-2" id="check_circle-9" checked>
+												<label for="check_circle-9">45 минут</label>
+											</div>
+											<div class="check_circle_list__item">
+												<input type="radio" name="check_circle-2" id="check_circle-10">
+												<label for="check_circle-10">60 минут</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="checklist__column checklist__column-60">
+									<h4>Возможные дни и время для занятий: </h4>
+									<p>Пожалуйста, укажите как можно больше вариантов дней и времени для занятий. <br>Чем больше окошек Вы укажите, тем выше вероятность того, что наиболее подходящий для Вас преподаватель будет свободен в указанное Вами время. </p>
+									<div class="column-100">
+										<textarea id="textarea11" onkeyup="checkParams_3_1()"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="step-4" class="reg__item">
+						<div class="reg__statusbar">
+							<div class="reg__status"><span>4</span></div>
+						</div>
+						<div class="reg__content">
+						<div class="reg__title"><i>4</i>Про Вас</div>
+							<h4>С кем бы Вы хотели заниматься:</h4>
+							<div class="checklist three-cols">
+								<div class="checklist__column">
+									<div class="reg__fields__item">
+										<label>Skype ID</label>
+										<input id="step_4_1" onkeyup="checkParams_4_1()" type="text" value="">
+									</div>
+								</div>
+								<div class="checklist__column">
+									<div class="reg__fields__item">
+										<label>Ваш город</label>
+										<input id="step_4_2" onkeyup="checkParams_4_1()" type="text" value="">
+									</div>
+								</div>
+								<div class="checklist__column">
+									<div class="reg__fields__item">
+										<label>Ваша страна</label>
+										<input id="step_4_3" onkeyup="checkParams_4_1()" type="text" value="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="step-5" class="reg__item">
+						<div class="reg__statusbar">
+							<div class="reg__status"><span>5</span></div>
+						</div>
+						<div class="reg__content">
+						<div class="reg__title"><i>5</i>Нужно ли нам знать еще <span>что-то</span> про Вас или Ваши цели?</div>
+							<div class="column-100"><textarea id="textarea12" onkeyup="checkParams_5_1()"></textarea></div>
+						</div>
+					</div>
+					<div class="reg_button"><input id="submit2" type="button" value="Отправить"></div>
 				</form>
-			</div>
-		</div>
-
-		<div class="searches">
-			<div class="wrapper">
-				<div class="section_title">Наш подход к обучению</div>
-				<ul>
-					<li class="wow fadeInUp" data-wow-delay=".2s">
-						<div class="icon">
-							<div class="hit-hit1 hit-hit1-dims"></div>
-						</div>
-						<p>Мы учим всем аспектам английского языка: разговорному английскому, произношению, грамматике, письму, лексике, и т.д. </p>
-					</li>
-					<li class="wow fadeInUp" data-wow-delay=".3s">
-						<div class="icon">
-							<div class="hit-hit2 hit-hit2-dims"></div>
-						</div>
-						<p>Наши занятия проводятся <br>на индивидуальной основе, <br>и мы строим обучение, <br>исходя из Ваших целей <br>и Вашего уровня.</p>
-					</li>
-					<li class="wow fadeInUp" data-wow-delay=".4s">
-						<div class="icon">
-							<div class="hit-hit3 hit-hit3-dims"></div>
-						</div>
-						<p>Мы анализируем ситуации, <br>в которых Вы используете <br>(или планируете использовать) английский и вводим нужные темы и конструкции <br>на первых же занятиях. </p>
-					</li>
-					<li class="wow fadeInUp" data-wow-delay=".5s">
-						<div class="icon">
-							<div class="hit-hit4 hit-hit4-dims"></div>
-						</div>
-						<p>Наш индивидуальный <br>и коммуникативный подход помогает достичь быстрых результатов. </p>
-					</li>
-					<li class="wow fadeInUp" data-wow-delay=".6s">
-						<div class="icon">
-							<div class="hit-hit5 hit-hit5-dims"></div>
-						</div>
-						<p>При обучении используются интересные задания <br>по английскому языку, упражнения <br>на произношение, грамматику, <br>лексику, аудирование, и т.д.</p>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="hits_list">
-			<div class="wrapper">
-				<div class="section_title">Популярные запросы</div>
-				<ul>
-					<li class="wow fadeInUp" data-wow-delay=".2s" data-wow-offset="50">
-						<a href="section-business.html">
-							<div class="imgbox"><img src="img/hit-1.jpg" alt=""></div>
-							<h2>Деловой английский</h2>
-						</a>
-					</li>
-					<li class="wow fadeInUp" data-wow-delay=".3s" data-wow-offset="50">
-						<a href="section-work.html">
-							<div class="imgbox"><img src="img/hit-2.jpg" alt=""></div>
-							<h2>Английский для поиска <br>работы и собеседований</h2>
-						</a>
-					</li>
-					<li class="wow fadeInUp" data-wow-delay=".4s" data-wow-offset="50">
-						<a href="section-international.html">
-							<div class="imgbox"><img src="img/hit-3.jpg" alt=""></div>
-							<h2>Международные экзамены</h2>
-						</a>
-					</li>
-					<li class="wow fadeInUp" data-wow-delay=".5s" data-wow-offset="50">
-						<a href="section-basis.html">
-							<div class="imgbox"><img src="img/hit-4.jpg" alt=""></div>
-							<h2>Общий английский <span>(Английский для себя)</span></h2>
-						</a>
-					</li>
-					<li class="wow fadeInUp" data-wow-delay=".6s" data-wow-offset="50">
-						<a href="section-academic.html">
-							<div class="imgbox"><img src="img/hit-5.jpg" alt=""></div>
-							<h2>Академический английский</h2>
-						</a>
-					</li>
-					<li class="wow fadeInUp" data-wow-delay=".7s" data-wow-offset="50">
-						<a href="section-tech.html">
-							<div class="imgbox"><img src="img/hit-6.jpg" alt=""></div>
-							<h2>Технический английский <span>(English for IT)</span></h2>
-						</a>
-					</li>
-				</ul>
 			</div>
 		</div>
 
